@@ -22,7 +22,10 @@ As you can see between TP and TF there are two versions of K(KP and KF) present.
 
 •	In order to avoid paradox we prevent same person from travelling to the same place at the same time twice.  
 •	Also this make sure that a person can travel to different places at the same time because each travel can be done by different versions of the same person.  
+# Application execution Flow
+![alt flow diagram](https://github.com/katic512/space-time-machine/blob/main/src/main/resources/static/img/app_flow.png)
 # Out of scope:
 •	Authentication and Authorization  
 •	User management  	
+
 
