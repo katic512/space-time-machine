@@ -1,11 +1,10 @@
 package com.gamesys.timetravel.spacetimemachine.service;
 
+import static com.gamesys.timetravel.spacetimemachine.constant.AppConstants.DEFAULT_PGI_PREFIX;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
-import static com.gamesys.timetravel.spacetimemachine.constant.AppConstants.DEFAULT_PGI_PREFIX;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

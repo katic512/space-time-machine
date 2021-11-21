@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "791c7267-539a-44a8-9093-50b0b9ce0d0d",
+		"name": "GameSys -space time machine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"karthick\",\"emailId\":\"karthick@galaxy.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/traveller",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traveller"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get traveller",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/traveller/KART351923",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traveller",
+						"KART351923"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "do travel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"pgi\":\"KART351923\",\"place\":\"salem\",\"date\":\"2021-08-17\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/traveller/travel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traveller",
+						"travel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get travel log",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/traveller/travelHistory/KART351923",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"traveller",
+						"travelHistory",
+						"KART351923"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

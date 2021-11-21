@@ -21,32 +21,47 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(value = { DuplicateDataException.class})
 	protected ResponseEntity<ExceptionDetail> handleDuplicateDataException(DuplicateDataException ex) {
+		String strLogPrefix = "Method : handleDuplicateDataException()";
+		LOGGER.info("{} | Entry ", strLogPrefix);
 		ExceptionDetail errorDetails = new ExceptionDetail(LocalDateTime.now(ZoneId.of(UTC)), ex.getMessage());
+		LOGGER.info("{} | Exit ", strLogPrefix);
 		return new ResponseEntity<ExceptionDetail>(errorDetails, HttpStatus.CONFLICT);
 	}
 	
 	@ExceptionHandler(value = { ParadoxException.class})
 	protected ResponseEntity<ExceptionDetail> handleParadoxException(ParadoxException ex) {
+		String strLogPrefix = "Method : handleParadoxException()";
+		LOGGER.info("{} | Entry ", strLogPrefix);
 		ExceptionDetail errorDetails = new ExceptionDetail(LocalDateTime.now(ZoneId.of(UTC)), ex.getMessage());
+		LOGGER.info("{} | Exit ", strLogPrefix);
 		return new ResponseEntity<ExceptionDetail>(errorDetails, HttpStatus.CONFLICT);
 	}
 	
 	@ExceptionHandler(value = { DataNotFoundException.class})
 	protected ResponseEntity<ExceptionDetail> handleDataNotFoundException(DataNotFoundException ex) {
+		String strLogPrefix = "Method : handleDataNotFoundException()";
+		LOGGER.info("{} | Entry ", strLogPrefix);
 		ExceptionDetail errorDetails = new ExceptionDetail(LocalDateTime.now(ZoneId.of(UTC)), ex.getMessage());
+		LOGGER.info("{} | Exit ", strLogPrefix);
 		return new ResponseEntity<ExceptionDetail>(errorDetails, HttpStatus.NOT_FOUND);
 	}
 	
 	@ExceptionHandler(value = { HttpMessageNotReadableException.class})
 	protected ResponseEntity<ExceptionDetail> handleHttpMessageNotReadableException(HttpMessageNotReadableException ex) {
+		String strLogPrefix = "Method : handleHttpMessageNotReadableException()";
+		LOGGER.info("{} | Entry ", strLogPrefix);
 		ExceptionDetail errorDetails = new ExceptionDetail(LocalDateTime.now(ZoneId.of(UTC)), ex.getMessage());
+		LOGGER.info("{} | Exit ", strLogPrefix);
 		return new ResponseEntity<ExceptionDetail>(errorDetails, HttpStatus.BAD_REQUEST);
 	}
 
 	@ExceptionHandler(value = { MethodArgumentNotValidException.class})
 	protected ResponseEntity<ExceptionDetail> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
+		String strLogPrefix = "Method : handleMethodArgumentNotValidException()";
+		LOGGER.info("{} | Entry ", strLogPrefix);
 		ExceptionDetail errorDetails = new ExceptionDetail(LocalDateTime.now(ZoneId.of(UTC)), null);
 		ex.getFieldErrors().forEach((fieldError)->errorDetails.setMessage(fieldError.getDefaultMessage()));
+		LOGGER.info("{} | Exit ", strLogPrefix);
 		return new ResponseEntity<ExceptionDetail>(errorDetails, HttpStatus.BAD_REQUEST);
 	}
 }

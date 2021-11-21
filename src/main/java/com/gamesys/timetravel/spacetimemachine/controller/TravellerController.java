@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -24,9 +22,6 @@ import com.gamesys.timetravel.spacetimemachine.service.TravellerService;
 @RestController
 @RequestMapping("/traveller")
 public class TravellerController {
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(TravellerController.class);
-
 	@Autowired
 	TravellerService travellerServie;
 	
