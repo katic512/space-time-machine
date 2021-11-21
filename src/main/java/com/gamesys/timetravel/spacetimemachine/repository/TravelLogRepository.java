@@ -8,7 +8,11 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.gamesys.timetravel.spacetimemachine.entity.TravelLogEntity;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @Repository
 public interface TravelLogRepository extends CrudRepository<TravelLogEntity, Integer>{
 

@@ -4,7 +4,11 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
 import org.springframework.stereotype.Component;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @Component
 public class Traveller {
 

@@ -4,7 +4,11 @@ import java.util.List;
 
 import com.gamesys.timetravel.spacetimemachine.model.TravelLog;
 import com.gamesys.timetravel.spacetimemachine.model.Traveller;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 public interface TravellerService {
 	Traveller getTraveller(String pgi);
 

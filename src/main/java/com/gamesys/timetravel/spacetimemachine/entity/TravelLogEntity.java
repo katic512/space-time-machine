@@ -10,7 +10,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.gamesys.timetravel.spacetimemachine.model.TravelLog;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @Table(name="TRAVEL_LOG")
 @Entity
 public class TravelLogEntity {

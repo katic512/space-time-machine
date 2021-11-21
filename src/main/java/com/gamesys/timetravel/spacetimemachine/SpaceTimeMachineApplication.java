@@ -2,7 +2,11 @@ package com.gamesys.timetravel.spacetimemachine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @SpringBootApplication
 public class SpaceTimeMachineApplication {
 

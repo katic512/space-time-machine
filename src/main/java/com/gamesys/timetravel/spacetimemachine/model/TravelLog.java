@@ -7,7 +7,11 @@ import javax.validation.constraints.NotEmpty;
 import org.springframework.lang.NonNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 public class TravelLog {
 
 	@NotEmpty(message = "PGI cannot be empty")

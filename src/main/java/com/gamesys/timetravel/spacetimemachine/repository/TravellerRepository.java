@@ -6,7 +6,11 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.gamesys.timetravel.spacetimemachine.entity.TravellerEntity;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @Repository
 public interface TravellerRepository extends CrudRepository<TravellerEntity,String>{
 

@@ -35,7 +35,11 @@ import com.gamesys.timetravel.spacetimemachine.model.Traveller;
 import com.gamesys.timetravel.spacetimemachine.repository.TravelLogRepository;
 import com.gamesys.timetravel.spacetimemachine.repository.TravellerRepository;
 import com.gamesys.timetravel.spacetimemachine.service.TravellerServiceImpl;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 class SpaceTimeMachineApplicationTests {

@@ -26,7 +26,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gamesys.timetravel.spacetimemachine.model.TravelLog;
 import com.gamesys.timetravel.spacetimemachine.model.Traveller;
 import com.gamesys.timetravel.spacetimemachine.service.TravellerService;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(TravellerController.class)
 public class TravellerControllerTest {

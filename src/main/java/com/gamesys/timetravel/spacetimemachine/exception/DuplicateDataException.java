@@ -1,5 +1,9 @@
 package com.gamesys.timetravel.spacetimemachine.exception;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 public class DuplicateDataException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 	

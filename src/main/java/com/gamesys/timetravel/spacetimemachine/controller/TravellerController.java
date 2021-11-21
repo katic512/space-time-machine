@@ -19,31 +19,64 @@ import com.gamesys.timetravel.spacetimemachine.model.TravelLog;
 import com.gamesys.timetravel.spacetimemachine.model.Traveller;
 import com.gamesys.timetravel.spacetimemachine.service.TravellerService;
 
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
+
 @RestController
 @RequestMapping("/traveller")
 public class TravellerController {
 	@Autowired
 	TravellerService travellerServie;
 	
+	/**
+	 *Get registered traveller details api
+	 * 
+	 * @param pgi
+	 * @return traveller object
+	 */
 	@GetMapping("/{pgi}")
 	public ResponseEntity<Traveller> getTraveller(@PathVariable("pgi") String pgi) {
 		return new ResponseEntity<>(travellerServie.getTraveller(pgi),HttpStatus.OK);
 	}
+	
+	/**
+	 * register new traveller, must for travel
+	 * 
+	 * @param newTraveller
+	 * @return saved Traveller object
+	 */
 	
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, 
         produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Traveller> registerNewTraveller(@Valid @RequestBody Traveller newTraveller) {
 		return new ResponseEntity<>(travellerServie.registerNewTraveller(newTraveller),HttpStatus.CREATED);
 	}
-	
-	@GetMapping("/travelHistory/{pgi}")
-	public ResponseEntity<List<TravelLog>> getTravelLogs(@PathVariable("pgi") String pgi) {
-		return new ResponseEntity<>(travellerServie.getTravelLogs(pgi),HttpStatus.OK);
-	}
 
+	/**
+	 * Perform travel
+	 * 
+	 * @param travelRequest
+	 * @return a travel log
+	 */
+	
 	@PostMapping(value="/travel",consumes = MediaType.APPLICATION_JSON_VALUE, 
         produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<TravelLog> doTravel(@Valid @RequestBody TravelLog travelRequest) {
 		return new ResponseEntity<>(travellerServie.doTravel(travelRequest),HttpStatus.CREATED);
+	}
+	
+	/**
+	 * list the travel history
+	 * 
+	 * @param pgi
+	 * @return list of travel logs
+	 */
+	
+	@GetMapping("/travelHistory/{pgi}")
+	public ResponseEntity<List<TravelLog>> getTravelLogs(@PathVariable("pgi") String pgi) {
+		return new ResponseEntity<>(travellerServie.getTravelLogs(pgi),HttpStatus.OK);
 	}
 }

@@ -29,7 +29,11 @@ import com.gamesys.timetravel.spacetimemachine.model.TravelLog;
 import com.gamesys.timetravel.spacetimemachine.model.Traveller;
 import com.gamesys.timetravel.spacetimemachine.repository.TravelLogRepository;
 import com.gamesys.timetravel.spacetimemachine.repository.TravellerRepository;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @ExtendWith(SpringExtension.class)
 public class TravellerServiceTest {
 

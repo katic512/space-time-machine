@@ -6,7 +6,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.gamesys.timetravel.spacetimemachine.model.Traveller;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 @Table(name="TRAVELLER")
 @Entity
 public class TravellerEntity {

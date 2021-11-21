@@ -1,7 +1,11 @@
 package com.gamesys.timetravel.spacetimemachine.exception;
 
 import java.time.LocalDateTime;
-
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 public class ExceptionDetail {
 	private LocalDateTime timestamp;
 	private String message;

@@ -4,6 +4,11 @@ import static com.gamesys.timetravel.spacetimemachine.constant.AppConstants.RAND
 import static com.gamesys.timetravel.spacetimemachine.constant.AppConstants.RANDOM_MIN_LIMIT;
 
 import java.util.Random;
+/**
+ * 
+ * @author Karthick Narasimhan
+ *
+ */
 public class AppUtils {
 
 	private static Random random = new Random();
